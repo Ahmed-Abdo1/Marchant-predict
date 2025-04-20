@@ -39,7 +39,7 @@ if page == "🏠 Home":
     - Use sliders and inputs for easy control
     - Predict with one click!
     """)
-    st.image(r"F:\machine project\final project\proAr.png", width=250)
+    st.image("proAr.png", width=250)
 
 if page == "📊 Predict":
     st.title("📊 Feature Inputs")

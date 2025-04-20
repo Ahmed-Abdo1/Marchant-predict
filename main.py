@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 # Load model
-model = pickle.load(open("F:/machine project/final project/XGBoost_best_model.pkl", "rb"))
+model = pickle.load(open("XGBoost_best_model.pkl", "rb"))
 
 st.set_page_config(page_title="Merchant Feature Prediction", page_icon="🧠", layout="wide")
 

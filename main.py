@@ -9,7 +9,7 @@ model = pickle.load(open("XGBoost_best_model.pkl", "rb"))
 st.set_page_config(page_title="Merchant Feature Prediction", page_icon="🧠", layout="wide")
 
 with st.sidebar:
-    st.image(r"F:\machine project\final project\proAr.png", width=150)
+    st.image("proAr.png", width=150)
     st.title("🧠 Predictor App")
     page = st.radio("Navigate", ["🏠 Home", "📊 Predict"])
     st.markdown("---")

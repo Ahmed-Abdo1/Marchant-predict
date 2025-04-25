@@ -6,14 +6,14 @@ from PIL import Image
 # Load model
 model = pickle.load(open("XGBoost_best_model.pkl", "rb"))
 
-st.set_page_config(page_title="Merchant Feature Prediction", page_icon="🧠", layout="wide")
+st.set_page_config(page_title="Customer Loyalty Analysis", page_icon="🧠", layout="wide")
 
 with st.sidebar:
     st.image("proAr.png", width=150)
-    st.title("🧠 Predictor App")
+    st.title("🧠 Loyalty Score Predictor")
     page = st.radio("Navigate", ["🏠 Home", "📊 Predict"])
     st.markdown("---")
-    st.write("Streamlit App for Predicting Merchant Loyalty Score")
+    st.write("Streamlit App for Predicting Customer Loyalty Score")
 
 feature_names = [
     'trans_purchase_year_mode', 'trans_purchase_month_mean', 'trans_purchase_month_mode',
@@ -25,11 +25,11 @@ feature_names = [
 ]
 
 if page == "🏠 Home":
-    st.title("🧠 Merchant Loyalty Score Prediction App")
+    st.title("🧠 Customer Loyalty Analysis Project")
     st.markdown("""
-    Welcome to the **Merchant Loyalty Prediction App**.  
-    The goal of this project is to **predict customer loyalty scores**
-    for merchants based on their **transactional behavior**.
+    📊 Project Overview
+    This project focuses on analyzing customer loyalty using data from the Elo Merchant Category Recommendation competition hosted on Kaggle.  
+    The goal is to **predict customer loyalty scores** based on transactional and merchant data, enabling personalized recommendations and improved customer engagement
 
     This is a **regression task** where we estimate how loyal a customer is,
     using features like transaction frequency, timing, and activity stats.
@@ -42,7 +42,7 @@ if page == "🏠 Home":
     st.image("proAr.png", width=250)
 
 if page == "📊 Predict":
-    st.title("📊 Feature Inputs")
+    st.title("📊 Input Feature Panel")
 
     st.subheader("🔢 Enter Numeric Features")
     inputs = []
